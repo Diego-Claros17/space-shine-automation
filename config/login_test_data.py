@@ -1,0 +1,16 @@
+class LoginTestData:
+    EMPTY_TEXT= ""
+    #loginpage
+    BASE_URL = "https://spaceshine.shop"
+    LOGIN_URL = "https://spaceshine.shop/account/login"
+    EMAIL = "diego.zucho@gmail.com"
+    PASSWORD = "Testspaceshine10"
+    EMPTY_EMAIL = ""
+    EMPTY_PASSWORD = ""
+    WRONG_EMAIL = "wrongemail@wrong.com"
+    WRONG_PASSWORD = "wrongpassword"
+    INVALID_EMAIL = "invalidemail"
+    PASSWORD2 = "Testspaceshine10"
+    INVALID_CHARACTERS_EMAIL = "@%$)()**(^"
+    SHORT_PASSWORD = "Pocoo"
+    LONG_PASSWORD = "VerylongpasswordVerylongpasswordVerylongpasswordVerylongpassword"

@@ -1,18 +1,25 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope="function")
 def driver():
-    # Ruta local al chromedriver.exe
-    driver_path = "C:/Users/lclar/Documents/space-shine-automation/chromedriver.exe"
-    service = Service(driver_path)
-    driver = webdriver.Chrome(service=service)
-    driver.maximize_window()
+    # Configura las opciones para Chrome
+    chrome_options = Options()
 
+    chrome_options.add_argument("--headless=old")
+    #chrome_options.add_argument("--headless")
+
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--window-size=1920x1080")
+
+    # Utiliza WebDriverManager para manejar el chromedriver automáticamente
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    #driver.maximize_window()
     # Devuelve el navegador para ser utilizado en las pruebas
     yield driver
-
-    # Cierra el navegador después de la prueba
     driver.quit()
+
