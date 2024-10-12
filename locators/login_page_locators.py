@@ -7,3 +7,4 @@ class LoginPageLocators:
     PASSWORD_FIELD = (By.ID, LoginPageSelectors.PASSWORD_FIELD)
     LOGIN_BUTTON = (By.CSS_SELECTOR, LoginPageSelectors.LOGIN_BUTTON)
     LOGIN_ERROR_MSG = (By.CSS_SELECTOR, LoginPageSelectors.LOGIN_ERROR_MSG)
+    FORGOT_PASSWORD_BTN = (By.CSS_SELECTOR, LoginPageSelectors.FORGOT_PASSWORD_BTN)

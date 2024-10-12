@@ -13,6 +13,6 @@ class BasePage:
         # Método para abrir cualquier URL
         self.driver.get(url)
 
-    def quit(self):
+    """def quit(self):
         # Método para cerrar el navegador
-        self.driver.quit()
+        self.driver.quit()"""
